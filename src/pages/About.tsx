@@ -51,12 +51,12 @@ const About = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   With years of hands-on experience in digital marketing, performance advertising, and growth strategy,
-                  Pradeep built Boostly Technologies to bridge the gap between traditional agency models and the new era
+                  Arpit built Boostly Technologies to bridge the gap between traditional agency models and the new era
                   of AI-driven marketing.
                 </p>
                 <p>
                   Having worked across diverse industries — from e-commerce to SaaS, local businesses to enterprise brands —
-                  Pradeep brings a rare combination of strategic vision and tactical execution. His approach centers on
+                  Arpit brings a rare combination of strategic vision and tactical execution. His approach centers on
                   building systems that deliver compounding results, not one-off campaigns.
                 </p>
                 <p>
