@@ -85,6 +85,10 @@ const Contact = () => {
                       <Mail className="h-4 w-4 text-primary" />
                       hello@boostlytechnologies.com
                     </a>
+                    <a href="tel:+918826273645" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                      <Phone className="h-4 w-4 text-primary" />
+                      +91 8826273645
+                    </a>
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <MapPin className="h-4 w-4 text-primary" />
                       India (Remote-first)
