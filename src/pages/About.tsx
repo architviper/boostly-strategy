@@ -47,7 +47,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block">The Founder</span>
-              <h2 className="text-3xl font-display font-bold text-text-bright mb-6">Pradeep Prajapati</h2>
+              <h2 className="text-3xl font-display font-bold text-text-bright mb-6">Arpit Tripathi</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   With years of hands-on experience in digital marketing, performance advertising, and growth strategy,
