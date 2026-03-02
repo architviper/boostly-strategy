@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, FileSearch, BarChart3, Target, Lightbulb } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -46,12 +47,17 @@ const Audit = () => {
               Get a comprehensive, no-strings-attached audit of your digital marketing — powered by our proprietary
               Growth Audit Framework™. Identify gaps, uncover opportunities, and get a clear path forward.
             </motion.p>
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3}>
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gradient-brand text-primary-foreground font-semibold px-8 hover:opacity-90">
                   Request Your Free Audit <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-primary text-primary font-semibold px-8 hover:bg-primary/10">
+                  Connect on WhatsApp
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, FolderOpen } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -41,11 +42,18 @@ const CaseStudies = () => {
               We're currently documenting detailed case studies with real client results, metrics, and growth breakdowns.
               Check back soon or get in touch to learn more about our work.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button className="bg-gradient-brand text-primary-foreground font-semibold hover:opacity-90">
                 Ask About Our Work <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-primary text-primary font-semibold hover:bg-primary/10">
+                Connect on WhatsApp
+              </Button>
+            </a>
+          </div>
           </motion.div>
         </div>
       </section>

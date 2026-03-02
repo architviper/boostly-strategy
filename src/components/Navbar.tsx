@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -40,11 +41,18 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <div className="flex items-center gap-2">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="sm" variant="outline" className="border-[#25D366] text-[#25D366] font-semibold hover:bg-[#25D366]/10">
+              WhatsApp
+            </Button>
+          </a>
           <Link to="/audit">
             <Button size="sm" className="bg-gradient-brand text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
               Get Free Audit
             </Button>
           </Link>
+        </div>
         </div>
 
         {/* Mobile toggle */}
@@ -75,6 +83,11 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+                <Button size="sm" variant="outline" className="w-full border-[#25D366] text-[#25D366] font-semibold">
+                  Connect on WhatsApp
+                </Button>
+              </a>
               <Link to="/audit" onClick={() => setOpen(false)}>
                 <Button size="sm" className="w-full bg-gradient-brand text-primary-foreground font-semibold">
                   Get Free Audit

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, Cpu, Target, TrendingUp, Search, Globe, Megaphone, Code, Sparkles, Shield, Zap, ChevronRight } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -125,6 +126,11 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-[#25D366] text-[#25D366] font-semibold text-base px-8 hover:bg-[#25D366]/10">
+                  Connect on WhatsApp
+                </Button>
+              </a>
               <Link to="/services">
                 <Button size="lg" variant="outline" className="border-border text-foreground font-semibold text-base px-8 hover:bg-secondary">
                   Explore Services
@@ -272,12 +278,19 @@ const Index = () => {
                 Get a comprehensive, no-obligation audit of your digital presence. We'll identify gaps,
                 opportunities, and a clear roadmap to scale.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/audit">
                 <Button size="lg" className="bg-primary-foreground text-primary font-semibold hover:bg-primary-foreground/90 px-8">
                   Claim Your Free Audit
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 px-8">
+                  Connect on WhatsApp
+                </Button>
+              </a>
+            </div>
             </div>
           </motion.div>
         </div>

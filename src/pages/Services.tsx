@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Target, Search, Megaphone, Code, BarChart3, Globe, ArrowRight, CheckCircle2 } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -163,11 +164,18 @@ const Services = () => {
               <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
                 Our free Growth Audit identifies your biggest opportunities and gives you a clear action plan.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/audit">
                 <Button size="lg" className="bg-primary-foreground text-primary font-semibold hover:bg-primary-foreground/90 px-8">
                   Get Your Free Audit <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary-foreground text-[#25D366] font-semibold hover:bg-primary-foreground/90 px-8">
+                  Connect on WhatsApp
+                </Button>
+              </a>
+            </div>
             </div>
           </div>
         </div>

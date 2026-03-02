@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Award, Lightbulb, Users, Zap } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -102,11 +103,18 @@ const About = () => {
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
               Whether you're looking to scale your marketing or optimize what's already working, we're here to help.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button size="lg" className="bg-gradient-brand text-primary-foreground font-semibold px-8 hover:opacity-90">
                 Start a Conversation <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-primary text-primary font-semibold px-8 hover:bg-primary/10">
+                Connect on WhatsApp
+              </Button>
+            </a>
+          </div>
           </motion.div>
         </div>
       </section>
