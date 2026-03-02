@@ -286,7 +286,7 @@ const Index = () => {
                 </Button>
               </Link>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 px-8">
+                <Button size="lg" className="bg-primary-foreground text-[#25D366] font-semibold hover:bg-primary-foreground/90 px-8">
                   Connect on WhatsApp
                 </Button>
               </a>
