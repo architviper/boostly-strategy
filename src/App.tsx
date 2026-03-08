@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import CaseStudies from "./pages/CaseStudies";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Audit from "./pages/Audit";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
