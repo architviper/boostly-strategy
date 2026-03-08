@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock, User } from "lucide-react";
-import { blogPosts, categories } from "@/lib/blogData";
+import { useSanityPosts } from "@/hooks/useSanityPosts";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,6 +10,7 @@ import { fadeUp } from "@/lib/animations";
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const { posts: blogPosts, categories, isLoading } = useSanityPosts();
 
   const filtered = activeCategory === "All"
     ? blogPosts

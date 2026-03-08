@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
-import { blogPosts } from "@/lib/blogData";
+import { useSanityPosts } from "@/hooks/useSanityPosts";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,9 +9,17 @@ import { fadeUp } from "@/lib/animations";
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const { posts: blogPosts, isLoading } = useSanityPosts();
   const post = blogPosts.find((p) => p.slug === slug);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!isLoading && !post) return <Navigate to="/blog" replace />;
+  if (isLoading || !post) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="animate-pulse text-muted-foreground">Loading...</div>
+      </div>
+    );
+  }
 
   const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
